@@ -1,0 +1,13 @@
+name: Linux
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure, Build and Test
+        uses: CesarBerriot/cmake-configure-build-test-workflow@v1.0.0
